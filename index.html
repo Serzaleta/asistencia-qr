@@ -15,12 +15,15 @@
     <h1>Asistencia QR</h1>
     <div id="reader"></div>
     <button id="start-scan">Iniciar Escáner</button>
-    <button id="stop-scan">Detener Escáner</button>
+    <button id="stop-scan" style="display: none;">Detener Escáner</button> <!-- Ocultar al inicio -->
     <ul id="attendance-list"></ul>
     <button id="export-btn">Exportar Asistencias</button>
   </div>
 
+  <!-- Cargar la librería html5-qrcode desde el CDN -->
   <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/minified/html5-qrcode.min.js"></script>
+  
+  <!-- Tu archivo JS con la lógica de escaneo y asistencia -->
   <script src="script.js"></script>
 </body>
 </html>
