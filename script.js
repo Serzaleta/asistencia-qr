@@ -17,8 +17,11 @@ startScanButton.addEventListener('click', () => {
   if (!isScanning) {
     qrScanner
       .start(
-        { facingMode: "environment" },
-        { fps: 10, qrbox: { width: 250, height: 250 } },
+        { facingMode: "environment" }, // Asegúrate de usar la cámara trasera en móviles
+        {
+          fps: 10,  // 10 frames por segundo
+          qrbox: { width: 250, height: 250 }  // Tamaño del área de escaneo
+        },
         (decodedText) => {
           const now = new Date();
           const timestamp = now.toLocaleString();
@@ -36,7 +39,10 @@ startScanButton.addEventListener('click', () => {
         }
       )
       .then(() => (isScanning = true))
-      .catch((err) => console.error("Error al iniciar el escáner:", err));
+      .catch((err) => {
+        console.error("Error al iniciar el escáner:", err);
+        alert("Hubo un problema al iniciar la cámara. Asegúrate de permitir el acceso.");
+      });
   }
 });
 
@@ -72,3 +78,4 @@ exportButton.addEventListener('click', () => {
   link.click();
   document.body.removeChild(link);
 });
+
