@@ -7,12 +7,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Asistencia QR</h1>
-  <div id="reader" style="width: 100%; height: 400px;"></div>
-  <button id="start-scan">Iniciar Escáner</button>
-  <button id="stop-scan" style="display: none;">Detener Escáner</button>
-  <ul id="attendance-list"></ul>
-  <button id="export-btn">Exportar Asistencias</button>
+  <!-- Logo de la aplicación -->
+  <img id="logo" src="images/logo.png" alt="Logo de la Aplicación">
+
+  <!-- Contenedor principal -->
+  <div class="container">
+    <h1>Asistencia QR</h1>
+    <div id="reader"></div>
+    <button id="start-scan">Iniciar Escáner</button>
+    <button id="stop-scan">Detener Escáner</button>
+    <ul id="attendance-list"></ul>
+    <button id="export-btn">Exportar Asistencias</button>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/minified/html5-qrcode.min.js"></script>
   <script src="script.js"></script>
