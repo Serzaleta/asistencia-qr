@@ -8,22 +8,22 @@
 </head>
 <body>
   <!-- Logo de la aplicación -->
-  <img id="logo" src="images/logo.png" alt="Logo de la Aplicación">
+  <header>
+    <img id="logo" src="images/logo.png" alt="Logo de la Aplicación">
+    <h1>Asistencia QR</h1>
+  </header>
 
   <!-- Contenedor principal -->
   <div class="container">
-    <h1>Asistencia QR</h1>
     <div id="reader"></div>
     <button id="start-scan">Iniciar Escáner</button>
-    <button id="stop-scan" style="display: none;">Detener Escáner</button> <!-- Ocultar al inicio -->
-    <ul id="attendance-list"></ul>
     <button id="export-btn">Exportar Asistencias</button>
+    <p id="status">Estado: Esperando escaneo...</p>
   </div>
 
-  <!-- Cargar la librería html5-qrcode desde el CDN -->
+  <!-- Librerías necesarias -->
   <script src="https://cdn.jsdelivr.net/npm/html5-qrcode/minified/html5-qrcode.min.js"></script>
-  
-  <!-- Tu archivo JS con la lógica de escaneo y asistencia -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

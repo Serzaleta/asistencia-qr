@@ -1,86 +1,58 @@
-/* Estilos generales del cuerpo */
+/* Estilo general */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+  text-align: center;
+  color: #333;
+}
+
+/* Encabezado con el logo centrado */
+header {
+  background: #4a4a4a;
+  color: white;
+  padding: 20px 0;
   text-align: center;
 }
 
-/* Estilo para el encabezado */
-h1 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 20px;
+header img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100px;
 }
 
-/* Estilo para el logo */
-#logo {
-  width: 120px;
-  margin-bottom: 20px;
+header h1 {
+  margin: 10px 0;
+  font-size: 1.8em;
 }
 
 /* Contenedor principal */
 .container {
-  background-color: #ffffff;
+  max-width: 600px;
+  margin: 30px auto;
   padding: 20px;
+  background: white;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 500px;
-  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para el lector de QR */
-#reader {
-  margin: 20px auto;
-  width: 100%;
-  height: 300px;
-  border: 2px solid #ddd;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-}
-
-/* Estilo de los botones */
+/* Botones */
 button {
-  background-color: #4CAF50;
+  background-color: #4a4a4a;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 10px;
-  font-size: 1.2rem;
+  margin: 10px 5px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
-/* Cambio de color en los botones al pasar el cursor */
 button:hover {
-  background-color: #45a049;
+  background-color: #6a6a6a;
 }
 
-/* Estilo del botón de "detener escáner" (invisible al inicio) */
-#stop-scan {
-  display: none;
-}
-
-/* Estilo para la lista de asistencias */
-ul {
-  list-style-type: none;
-  padding: 0;
+#status {
+  font-size: 1.2em;
   margin-top: 20px;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-/* Estilo para cada item de asistencia */
-li {
-  background-color: #f9f9f9;
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
